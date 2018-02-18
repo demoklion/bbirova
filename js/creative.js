@@ -60,7 +60,7 @@
   $('.popup-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
-    tLoading: 'Loading image #%curr%...',
+    tLoading: 'Nahrávám obraz bez domova #%curr%...',
     mainClass: 'mfp-img-mobile',
     gallery: {
       enabled: true,
@@ -68,7 +68,7 @@
       preload: [0, 1]
     },
     image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+      tError: '<a href="%url%">Obraz bez domova #%curr%</a> se nepodařilo načíst :('
     }
   });
 
