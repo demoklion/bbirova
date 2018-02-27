@@ -1,65 +1,347 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="cs">
+
+<head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+          content="Jak nahlížíme a jak viděné vyobrazujeme je ovlivněno mimo jiné tím, kde a jak žijeme. Pokud chceme o člověku vědět víc, má význam se nahlížením a reprezentací viděného podrobně zabývat.">
+    <meta name="author"
+          content="Barbora Bírová">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/4.10.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/4.10.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/4.10.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/4.10.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/4.10.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+    <title>Obrazy bez domova | bbirova.space</title>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css"
+          rel="stylesheet">
 
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css"
+          rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet'
+          type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css"
+          rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+         id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger"
+               href="#page-top">Obrazy bez domova</a>
+            <button class="navbar-toggler navbar-toggler-right"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse"
+                 id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger"
+                           href="#vystavy">Výstavy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger"
+                           href="#prace">Práce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger"
+                           href="#o-barbore">O Barbore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger"
+                           href="#kontakt">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1>
+                        <strong>Každodenní zkušenost <br>lidí bez domova</strong>
+                    </h1>
+                    <hr>
+                </div>
+                <div class="col-lg-8 mx-auto">
+                    <p class="text-faded mb-5">Představený výběr fotografií vznikal použitím různé snímací techniky, od zrcadlovky přes jednorázové fotoaparáty až po mobilní telefony. Vizuální stránka je doplněna zvukovou stopou, vytvořenou ze sestřihu rozhovorů a ruchů, které byly zaznamenány během výzkumu.</p>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger"
+                       href="#about">Fotografie</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary"
+             id="vystavy">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading text-white">We've got what you need!</h2>
+                    <hr class="light my-4">
+                    <p class="text-faded mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
+                    <a class="btn btn-light btn-xl js-scroll-trigger"
+                       href="#services">Get Started!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prace">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">At Your Service</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Sturdy Templates</h3>
+                        <p class="text-muted mb-0">Our templates are updated regularly so they don't break.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Ready to Ship</h3>
+                        <p class="text-muted mb-0">You can use this theme as is, or you can make changes!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Up to Date</h3>
+                        <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box mt-5 mx-auto">
+                        <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+                        <h3 class="mb-3">Made with Love</h3>
+                        <p class="text-muted mb-0">You have to make your websites with love these days!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-0"
+             id="o-barbore">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box"
+                       href="img/portfolio/fullsize/1.jpg">
+                                <img
+                                    class="img-fluid"
+                                    src="img/portfolio/thumbnails/1.jpg"
+                                    alt=""
+                                >
+                                    <div class="portfolio-box-caption">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded">
+                                                Category
+                                            </div>
+                                            <div class="project-name">
+                                                Project Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box"
+                       href="img/portfolio/fullsize/2.jpg">
+                                <img
+                                    class="img-fluid"
+                                    src="img/portfolio/thumbnails/2.jpg"
+                                    alt=""
+                                >
+                                    <div class="portfolio-box-caption">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded">
+                                                Category
+                                            </div>
+                                            <div class="project-name">
+                                                Project Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box"
+                       href="img/portfolio/fullsize/3.jpg">
+                                <img
+                                    class="img-fluid"
+                                    src="img/portfolio/thumbnails/3.jpg"
+                                    alt=""
+                                >
+                                    <div class="portfolio-box-caption">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded">
+                                                Category
+                                            </div>
+                                            <div class="project-name">
+                                                Project Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box"
+                       href="img/portfolio/fullsize/4.jpg">
+                                <img
+                                    class="img-fluid"
+                                    src="img/portfolio/thumbnails/4.jpg"
+                                    alt=""
+                                >
+                                    <div class="portfolio-box-caption">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded">
+                                                Category
+                                            </div>
+                                            <div class="project-name">
+                                                Project Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box"
+                       href="img/portfolio/fullsize/5.jpg">
+                                <img
+                                    class="img-fluid"
+                                    src="img/portfolio/thumbnails/5.jpg"
+                                    alt=""
+                                >
+                                    <div class="portfolio-box-caption">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded">
+                                                Category
+                                            </div>
+                                            <div class="project-name">
+                                                Project Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portfolio-box"
+                       href="img/portfolio/fullsize/6.jpg">
+                                <img
+                                    class="img-fluid"
+                                    src="img/portfolio/thumbnails/6.jpg"
+                                    alt=""
+                                >
+                                    <div class="portfolio-box-caption">
+                                        <div class="portfolio-box-caption-content">
+                                            <div class="project-category text-faded">
+                                                Category
+                                            </div>
+                                            <div class="project-name">
+                                                Project Name
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+            <a class="btn btn-light btn-xl sr-button"
+               href="http://startbootstrap.com/template-overviews/creative/">Download Now!</a>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="my-4">
+                    <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center">
+                    <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                    <p>
+                        <a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyChTPIXSBXCPFwFth1d_mZJxn9lDZx__6E",
+            authDomain: "bbirovaspace.firebaseapp.com",
+            databaseURL: "https://bbirovaspace.firebaseio.com",
+            projectId: "bbirovaspace",
+            storageBucket: "bbirovaspace.appspot.com",
+            messagingSenderId: "238617155603"
+        };
+        firebase.initializeApp(config);
     </script>
-  </body>
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase-app.js"></script>
+</body>
+
 </html>
