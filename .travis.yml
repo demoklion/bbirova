@@ -1,11 +1,17 @@
 sudo:          false
 language:      node_js
 node_js:
-  - "node"
-install:       npm install
+  — "node"
+  — "7"
+install:       
+  - npm install
+  — npm install -g firebase-tools
 script:
   - npm test
   - gulp
+  — echo “Deploy!!”
 cache:
   directories:
     - node_modules
+after_success:
+ — firebase deploy — project projectId — token bbirovaspace.
