@@ -1,0 +1,56 @@
+[debug] [2018-03-04T10:03:49.710Z] ----------------------------------------------------------------------
+[debug] [2018-03-04T10:03:49.713Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jandu\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase deploy
+[debug] [2018-03-04T10:03:49.713Z] CLI Version:   3.17.4
+[debug] [2018-03-04T10:03:49.714Z] Platform:      win32
+[debug] [2018-03-04T10:03:49.714Z] Node Version:  v9.4.0
+[debug] [2018-03-04T10:03:49.714Z] Time:          Sun Mar 04 2018 11:03:49 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:03:49.715Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-04T10:03:49.744Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-04T10:03:49.745Z] > authorizing via signed-in user
+[debug] [2018-03-04T10:03:49.749Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-04T10:03:49.750Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/x12uE0ulq3zAxfD0KU4Unno95IVDietUIfjuuhv-WwKbxzapW4jx8rNKCFSZMXxs',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Sun Mar 04 2018 11:03:49 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:03:58.791Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T10:03:58.903Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/bbirovaspace  
+  
+ Sun Mar 04 2018 11:03:58 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:04:04.084Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T10:04:04.087Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/bbirovaspace/tokens  
+  
+ Sun Mar 04 2018 11:04:04 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:04:20.595Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'bbirovaspace'...
+[info] 
+[info] i  deploying storage, hosting
+[debug] [2018-03-04T10:04:23.521Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/bbirovaspace  
+  
+ Sun Mar 04 2018 11:04:23 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:04:24.898Z] <<< HTTP RESPONSE 200
+[info] i  storage: checking storage.rules for compilation errors...
+[debug] [2018-03-04T10:04:24.915Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/bbirovaspace:test  
+ { source: { files: [ [Object] ] } } 
+ Sun Mar 04 2018 11:04:24 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:04:26.395Z] <<< HTTP RESPONSE 200
+[info] +  storage: rules file storage.rules compiled successfully
+[info] i  storage: uploading rules storage.rules...
+[debug] [2018-03-04T10:04:26.401Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/bbirovaspace/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Sun Mar 04 2018 11:04:26 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:04:27.568Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-04T10:04:27.568Z] [rules] created ruleset projects/bbirovaspace/rulesets/2356a832-bdc3-4dcf-81b1-e473abfd0de8
+[info] i  hosting: preparing public directory for upload...
+[debug] [2018-03-04T10:04:47.059Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/bbirovaspace/uploads/-L6kT2RehskBjOkPfqyw?fileCount=107&message=  
+  
+ Sun Mar 04 2018 11:04:47 GMT+0100 (Central Europe Standard Time)
+[debug] [2018-03-04T10:22:56.875Z] Error: write ECONNRESET
+    at _errnoException (util.js:1003:13)
+    at WriteWrap.afterWrite [as oncomplete] (net.js:863:14)
+[error] 
+[error] Error: Server Error. write ECONNRESET
