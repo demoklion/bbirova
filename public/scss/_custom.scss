@@ -2,3 +2,11 @@
     font-size: 1.1rem;
     text-align: left;
 }
+
+.lowercase {
+    text-transform: unset;
+}
+
+.small-caps {
+    font-variant-caps: all-small-caps;
+}

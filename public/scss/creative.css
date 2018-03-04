@@ -1,8 +1,3 @@
-.longform {
-  font-size: 1.1rem;
-  text-align: left;
-}
-
 body,
 html {
   width: 100%;
@@ -314,5 +309,18 @@ header.masthead p {
 
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(240, 95, 64, 0.5) !important;
+}
+
+.longform {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.lowercase {
+  text-transform: unset;
+}
+
+.small-caps {
+  font-variant-caps: all-small-caps;
 }
 /*# sourceMappingURL=creative.css.map */
