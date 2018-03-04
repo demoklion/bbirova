@@ -1,3 +1,5 @@
 node_modules
 bower_components
+public/img/*.tmp
 public/img/bg.psd
+firebase-debug.log
