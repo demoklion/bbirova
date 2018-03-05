@@ -3,13 +3,12 @@ language:      node_js
 node_js:
   — "node"
 install:       
-  npm install
   npm install firebase-tools
 script:
-  — npm test
-  — gulp
-  — firebase serve
-  — echo “Deploy!!”
+  npm test &&
+  gulp &&
+  firebase serve &&
+  echo “Deploy!!”
 cache:
   directories:
     — node_modules
