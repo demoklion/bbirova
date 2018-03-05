@@ -12,6 +12,6 @@ cache:
   directories:
     — node_modules
 after_success:
-  — firebase deploy — project projectId — token "1/C2Tas9wZ2PfouRiDY18HBBtSERvtqAOGMWGBaH_lmes19NtjdpjMhWFsuWUA3SNE" --non-interactive.
+  — firebase deploy — project "bbirovaspace" — token "1/C2Tas9wZ2PfouRiDY18HBBtSERvtqAOGMWGBaH_lmes19NtjdpjMhWFsuWUA3SNE" --non-interactive.
 deploy:
   skip_cleanup: true
