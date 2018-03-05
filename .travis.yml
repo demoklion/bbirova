@@ -3,8 +3,8 @@ language:      node_js
 node_js:
   — "node"
 install:       
-  — npm install
-  — npm install firebase-tools
+  npm install
+  npm install firebase-tools
 script:
   — npm test
   — gulp
