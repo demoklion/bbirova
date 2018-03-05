@@ -1,17 +1,16 @@
-sudo:          false
-language:      node_js
-node_js:
-  — "node"
-install:     
-  - npm install firebase-tools
+sudo: false
+language: node_js
+node_js: — "node"
+install:
+- npm install firebase-tools
 script:
-  - npm test
-  - firebase serve
-  - echo “Deploy!!”
+- npm test
+- echo “Deploy!!”
 cache:
-  directories:
-    — node_modules
-after_success:
-  — firebase deploy — project "bbirovaspace" — token "1/C2Tas9wZ2PfouRiDY18HBBtSERvtqAOGMWGBaH_lmes19NtjdpjMhWFsuWUA3SNE" --non-interactive.
+  directories: "— node_modules"
 deploy:
+  provider: firebase
+  token:
+    secure: UGNKDyW+mrwh2Jch3pNtqT0w4zHHdvzz7PrphNFNG7yHvu+pzdZQZPNei5I8zERmYUcEijZKtdChbxAq6Kg9oYGKYBJbwrSClGjxLriZOANryxswDxPfmP2OCTk5iMr/RC6af2rYUpdXqJ7uB7i8EvGYSQP4XfTdgrB1xCIE8Q48ooeVihpMwMj2brfzxpvVWX4ilK2R2jzv3ZQNb3XEKHfwd4QeczXKpRRq5h+sFcjR80rqChwxkDdIHNN7vDdWkoyBEETSsTH3NIMg4Bey9guIFxw7/0iWRPA2zsp+HrL10V3GCpplfdwr1IRVMF28a4rSNQnlVRBWjxSOTszKpeKkD0p4xlRlTqL97WHN1Mt91HX4jv5mBGF5r/UktJke3JuW/hywVrR2yYVgJl/2sxwXDj4Tu+xlgEDIBlUuGwdVlpvO57C2c5L/x6mOfBfjyDiLX8WdAjnLkFncCgTuurB+Zr8HeuCcTv3/Mxwhx3PBvJOJUaGvNRFP4iTW3EfRlJpr5rA+qTlhSVwHe8jKKg+Cl9kkDGQC6aQ93Eh4Wg9goKTdd9QjIfYu3AD1ONnscv/+M28o60wZBBRL/3HvVX4+NpF1d20y8gt1p11G3MmFJZvHJ6vg8Bx7XnNwFVn1rY1VUD3J7mnD8hKNbfh2Vm7IDBS52UMJC6o5wjtggdM=
+  project: "bbirovaspace"
   skip_cleanup: true
