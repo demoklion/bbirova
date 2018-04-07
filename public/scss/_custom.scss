@@ -1,15 +1,25 @@
 .longform {
     font-size: 1.1rem;
     text-align: left;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.text-transform-unset {
+    text-transform: unset;
 }
 
 .lowercase {
-    text-transform: unset;
+    text-transform: lowercase;
 }
 
 .small-caps {
     font-variant-caps: all-small-caps;
 }
+
+.hero-bold {
+    font-weight: 700;
+}
+
 
 // .skip-ink {
 //     text-decoration-skip-ink: auto;
