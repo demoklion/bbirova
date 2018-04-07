@@ -5,6 +5,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var htmlmin = require('gulp-htmlmin');
 var browserSync = require('browser-sync')
     .create();
 
@@ -110,8 +111,21 @@ gulp.task('js:minify', function() {
 // JS
 gulp.task('js', ['js:minify']);
 
+//Minify HTML
+gulp.task('html:minify', function() {
+    return gulp.src('./public/index.dev.html')
+        .pipe(htmlmin({
+            collapseWhitespace: true
+        }))
+        .pipe(rename(('./public/index.html')))
+        .pipe(gulp.dest('.'));
+});
+
+//HTML
+gulp.task('html', ['html:minify']);
+
 // Default task
-gulp.task('default', ['css', 'js', 'vendor']);
+gulp.task('default', ['css', 'js', 'html', 'vendor']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
@@ -123,8 +137,9 @@ gulp.task('browserSync', function() {
 });
 
 // Dev task
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'js', 'html', 'browserSync'], function() {
     gulp.watch('./public/scss/*.scss', ['css']);
     gulp.watch('./public/js/*.js', ['js']);
-    gulp.watch('./public/*.html', browserSync.reload);
+    gulp.watch('./public/index.dev.html', ['html']);
+    gulp.watch('./public/index.dev.html', browserSync.reload);
 });
