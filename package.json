@@ -27,13 +27,13 @@
     },
     "dependencies": {
         "bootstrap": "4.0.0",
-        "express": "^4.16.2",
+        "express": "^4.16.3",
         "font-awesome": "4.7.0",
         "gulp-htmlmin": "^4.0.0",
         "jquery": "3.3.1",
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0",
-        "popper.js": "^1.12.9",
+        "popper.js": "^1.14.3",
         "scrollreveal": "3.3.6",
         "travis": "^0.1.1"
     },
@@ -43,7 +43,7 @@
         "gulp-clean-css": "3.9.2",
         "gulp-header": "2.0.1",
         "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
+        "gulp-sass": "^3.2.1",
         "gulp-uglify": "3.0.0"
     }
 }
