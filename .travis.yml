@@ -1,16 +1,15 @@
 sudo: false
 language: node_js
-node_js: 
+node_js:
     — "node"
 install:
-    - npm install 
-    - firebase-tools
+    - npm i firebase-tools
 script:
     - npm test
     - gulp
     - echo “Deploy!!”
 cache:
-  directories: 
+  directories:
     — node_modules
 deploy:
   provider: firebase
