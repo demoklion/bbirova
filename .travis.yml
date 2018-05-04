@@ -3,6 +3,7 @@ language: node_js
 node_js: "node"
 install:
     - npm i firebase-tools
+    - npm i node-sass
 script:
     - npm test
     - gulp
