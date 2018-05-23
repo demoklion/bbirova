@@ -28,7 +28,7 @@
     "dependencies": {
         "bootstrap": "4.1.1",
         "express": "^4.16.3",
-        "firebase-tools": "^3.18.4",
+        "firebase-tools": "^3.18.5",
         "font-awesome": "4.7.0",
         "gulp-htmlmin": "^4.0.0",
         "jquery": "3.3.1",
@@ -36,7 +36,7 @@
         "magnific-popup": "^1.1.0",
         "node-sass": "^4.9.0",
         "popper.js": "^1.14.3",
-        "request": "^2.86.0",
+        "request": "^2.87.0",
         "scrollreveal": "3.4.0",
         "tape": "^4.9.0",
         "travis": "^0.1.1"
