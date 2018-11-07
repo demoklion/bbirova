@@ -48,7 +48,7 @@
         "gulp-rename": "^1.4.0",
         "gulp-sass": "4.0.2",
         "gulp-uglify": "^3.0.1",
-        "hoek": "^5.0.4",
+        "hoek": "^6.0.2",
         "scrollreveal": "^4.0.0"
     }
 }
