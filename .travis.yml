@@ -1,8 +1,9 @@
 sudo: false
 language: node_js
-node_js: "node"
+node_js:
+  - "10"
 install:
-    - npm i  
+    - npm ci
     - npm i firebase-tools
     - npm i node-sass
 script:
