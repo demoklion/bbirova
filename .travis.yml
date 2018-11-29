@@ -4,7 +4,7 @@ node_js:
   - "10"
 install:
     - npm ci
-    - npm i firebase-tools
+    - npm i -g firebase-tools
     - npm i node-sass
 script:
     - npm test
